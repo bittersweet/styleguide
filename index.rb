@@ -74,11 +74,13 @@ def en_niet_dit
   }
 end
 
-# Gebruik Ruby
+# Je kan attributen ook als query gebruiken
+
+if idea.title?
+
+# ipv
 
 if !idea.title.blank?
-
-if idea.title
 
 # Gebruik van de return value van = is prima
 
