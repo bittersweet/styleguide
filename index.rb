@@ -30,6 +30,21 @@ a_very_long_method_name(argument1,
                         a + b,
                         arg_3)
 
+# Gebruik een newline voor de return value van een method (behalve als het maar
+# 1 lijn heeft). Gebruik 1 newline tussen bijvoorbeeld def blocks maar zorg
+# ervoor dat er geen onnodige newlines in je code voorkomen
+
+def instance_method(arg)
+  arg.upcase
+end
+
+def instance_method2(arg1, arg2)
+  arg3 = arg1 * arg2
+  update_attribute(status, "completed")
+
+  arg3
+end
+
 # Indent `when` net zo diep als `case`
 
 case var
@@ -88,20 +103,6 @@ if user = User.find(1)
   user.destroy
 else
   redirect_to root_path
-end
-
-# Gebruik een newline voor de return value van een method (behalve als het maar
-# 1 lijn heeft) 1 newline tussen method definitions
-
-def instance_method(arg)
-  arg.upcase
-end
-
-def instance_method2(arg1, arg2)
-  arg3 = arg1 * arg2
-  update_attribute(status, "completed")
-
-  arg3
 end
 
 # gebruik geen return als het niet nodig is (alleen nodig als je bijvoorbeeld

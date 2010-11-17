@@ -111,6 +111,28 @@
         <div class="octowrap">
           <a class="octothorpe" href="#section-7">#</a>
         </div>
+        <p> Gebruik een newline voor de return value van een method (behalve als het maar
+ 1 lijn heeft). Gebruik 1 newline tussen bijvoorbeeld def blocks maar zorg
+ ervoor dat er geen onnodige newlines in je code voorkomen</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+  <span class="n">arg</span><span class="o">.</span><span class="n">upcase</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">instance_method2</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+  <span class="n">arg3</span> <span class="o">=</span> <span class="n">arg1</span> <span class="o">*</span> <span class="n">arg2</span>
+  <span class="n">update_attribute</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="s2">&quot;completed&quot;</span><span class="p">)</span>
+
+  <span class="n">arg3</span>
+<span class="k">end</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="octowrap">
+          <a class="octothorpe" href="#section-8">#</a>
+        </div>
         <p> Indent <code>when</code> net zo diep als <code>case</code></p>
       </td>
       <td class=code>
@@ -122,10 +144,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-8'>
+    <tr id='section-9'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-8">#</a>
+          <a class="octothorpe" href="#section-9">#</a>
         </div>
         <p> Als de when clausule erg simpel is kan het ook nog op 1 lijn</p>
       </td>
@@ -136,10 +158,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-9'>
+    <tr id='section-10'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-9">#</a>
+          <a class="octothorpe" href="#section-10">#</a>
         </div>
         <p> Gebruik <code>&amp;&amp;</code> en <code>||</code> ipv <code>and</code> en <code>or</code></p>
 
@@ -153,10 +175,10 @@
 <span class="n">foo</span> <span class="o">=</span> <span class="mi">42</span> <span class="ow">and</span> <span class="n">foo</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="mi">21</span></pre></div>
       </td>
     </tr>
-    <tr id='section-10'>
+    <tr id='section-11'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-10">#</a>
+          <a class="octothorpe" href="#section-11">#</a>
         </div>
         <p> Meerdere lijnen hoeven niet uit te lijnen, dit scheelt aanpaswerk en maakt
  diffs duidelijker als er iets veranderd is</p>
@@ -179,10 +201,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-11'>
+    <tr id='section-12'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-11">#</a>
+          <a class="octothorpe" href="#section-12">#</a>
         </div>
         <p> Je kan attributen ook als query gebruiken</p>
       </td>
@@ -190,10 +212,10 @@
         <div class='highlight'><pre><span class="k">if</span> <span class="n">idea</span><span class="o">.</span><span class="n">title?</span></pre></div>
       </td>
     </tr>
-    <tr id='section-12'>
+    <tr id='section-13'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-12">#</a>
+          <a class="octothorpe" href="#section-13">#</a>
         </div>
         <p> ipv</p>
       </td>
@@ -201,10 +223,10 @@
         <div class='highlight'><pre><span class="k">if</span> <span class="o">!</span><span class="n">idea</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">blank?</span></pre></div>
       </td>
     </tr>
-    <tr id='section-13'>
+    <tr id='section-14'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-13">#</a>
+          <a class="octothorpe" href="#section-14">#</a>
         </div>
         <p> Gebruik van de return value van = is prima</p>
       </td>
@@ -213,27 +235,6 @@
   <span class="n">user</span><span class="o">.</span><span class="n">destroy</span>
 <span class="k">else</span>
   <span class="n">redirect_to</span> <span class="n">root_path</span>
-<span class="k">end</span></pre></div>
-      </td>
-    </tr>
-    <tr id='section-14'>
-      <td class=docs>
-        <div class="octowrap">
-          <a class="octothorpe" href="#section-14">#</a>
-        </div>
-        <p> Gebruik een newline voor de return value van een method (behalve als het maar
- 1 lijn heeft) 1 newline tussen method definitions</p>
-      </td>
-      <td class=code>
-        <div class='highlight'><pre><span class="k">def</span> <span class="nf">instance_method</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-  <span class="n">arg</span><span class="o">.</span><span class="n">upcase</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="nf">instance_method2</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
-  <span class="n">arg3</span> <span class="o">=</span> <span class="n">arg1</span> <span class="o">*</span> <span class="n">arg2</span>
-  <span class="n">update_attribute</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="s2">&quot;completed&quot;</span><span class="p">)</span>
-
-  <span class="n">arg3</span>
 <span class="k">end</span></pre></div>
       </td>
     </tr>
