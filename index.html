@@ -35,7 +35,8 @@
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="k">def</span> <span class="nf">rewrite</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
-<span class="no">Object</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="s2">&quot;holder&quot;</span><span class="p">,</span> <span class="s2">&quot;Holder&quot;</span><span class="p">)</span></pre></div>
+<span class="no">Object</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="s2">&quot;holder&quot;</span><span class="p">,</span> <span class="s2">&quot;Holder&quot;</span><span class="p">)</span>
+<span class="n">redirect_to</span> <span class="n">post_path</span><span class="p">(</span><span class="ss">:query</span> <span class="o">=&gt;</span> <span class="s1">&#39;test&#39;</span><span class="p">)</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -43,14 +44,11 @@
         <div class="octowrap">
           <a class="octothorpe" href="#section-2">#</a>
         </div>
-        <p> Zet spaties achter operators, commas, dubbele punten, puntcommas en haakjes</p>
+        <p> Dit hoeft niet bij alles</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span>
-<span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span>
-<span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:a</span><span class="p">,</span> <span class="ss">:b</span> <span class="p">}</span>
-<span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">args</span><span class="o">|</span> <span class="n">upcase</span> <span class="p">}</span>
-<span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span></pre></div>
+        <div class='highlight'><pre><span class="n">redirect_to</span> <span class="n">post_path</span>
+<span class="n">render</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="ss">:post</span></pre></div>
       </td>
     </tr>
     <tr id='section-3'>
@@ -58,16 +56,31 @@
         <div class="octowrap">
           <a class="octothorpe" href="#section-3">#</a>
         </div>
-        <p> Maar niet in evaluated ruby</p>
+        <p> Zet spaties achter operators, commas, dubbele punten, puntcommas en haakjes</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="s2">&quot;</span><span class="si">#{</span><span class="n">object</span><span class="o">.</span><span class="n">to_i</span><span class="si">}</span><span class="s2">&quot;</span></pre></div>
+        <div class='highlight'><pre><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span>
+<span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">args</span><span class="o">|</span> <span class="n">upcase</span> <span class="p">}</span>
+<span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span></pre></div>
       </td>
     </tr>
     <tr id='section-4'>
       <td class=docs>
         <div class="octowrap">
           <a class="octothorpe" href="#section-4">#</a>
+        </div>
+        <p> Maar niet hier</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:a</span><span class="p">,</span> <span class="ss">:b</span><span class="p">}</span>
+<span class="s2">&quot;</span><span class="si">#{</span><span class="n">object</span><span class="o">.</span><span class="n">to_i</span><span class="si">}</span><span class="s2">&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="octowrap">
+          <a class="octothorpe" href="#section-5">#</a>
         </div>
         <p> Geen spaties achter ([ en voor ])</p>
       </td>
@@ -76,10 +89,10 @@
 <span class="nb">hash</span><span class="o">[</span><span class="n">key</span><span class="o">]</span></pre></div>
       </td>
     </tr>
-    <tr id='section-5'>
+    <tr id='section-6'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-5">#</a>
+          <a class="octothorpe" href="#section-6">#</a>
         </div>
         <p> Probeer je code binnen 80 karakters te houden, dit verbeterd leesbaarheid
  (doordat je alles in 1x kan lezen) en maakt je code bruikbaarder met <code>diff</code> en
@@ -89,10 +102,10 @@
         <div class='highlight'><pre></pre></div>
       </td>
     </tr>
-    <tr id='section-6'>
+    <tr id='section-7'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-6">#</a>
+          <a class="octothorpe" href="#section-7">#</a>
         </div>
         <p> Als een lange functie call of variabelen er voor kunnen zorgen dat je een te
  lange lijn krijgt kan je een van de volgende situaties gebruiken.</p>
@@ -106,10 +119,10 @@
                         <span class="n">arg_3</span><span class="p">)</span></pre></div>
       </td>
     </tr>
-    <tr id='section-7'>
+    <tr id='section-8'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-7">#</a>
+          <a class="octothorpe" href="#section-8">#</a>
         </div>
         <p> Gebruik een newline voor de return value van een method (behalve als het maar
  1 lijn heeft). Gebruik 1 newline tussen bijvoorbeeld def blocks maar zorg
@@ -128,10 +141,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-8'>
+    <tr id='section-9'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-8">#</a>
+          <a class="octothorpe" href="#section-9">#</a>
         </div>
         <p> Indent <code>when</code> net zo diep als <code>case</code></p>
       </td>
@@ -144,10 +157,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-9'>
+    <tr id='section-10'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-9">#</a>
+          <a class="octothorpe" href="#section-10">#</a>
         </div>
         <p> Als de when clausule erg simpel is kan het ook nog op 1 lijn</p>
       </td>
@@ -158,10 +171,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-10'>
+    <tr id='section-11'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-10">#</a>
+          <a class="octothorpe" href="#section-11">#</a>
         </div>
         <p> Gebruik <code>&amp;&amp;</code> en <code>||</code> ipv <code>and</code> en <code>or</code></p>
 
@@ -175,10 +188,10 @@
 <span class="n">foo</span> <span class="o">=</span> <span class="mi">42</span> <span class="ow">and</span> <span class="n">foo</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="mi">21</span></pre></div>
       </td>
     </tr>
-    <tr id='section-11'>
+    <tr id='section-12'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-11">#</a>
+          <a class="octothorpe" href="#section-12">#</a>
         </div>
         <p> Meerdere lijnen hoeven niet uit te lijnen, dit scheelt aanpaswerk en maakt
  diffs duidelijker als er iets veranderd is</p>
@@ -201,10 +214,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-12'>
+    <tr id='section-13'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-12">#</a>
+          <a class="octothorpe" href="#section-13">#</a>
         </div>
         <p> Je kan attributen ook als query gebruiken</p>
       </td>
@@ -212,10 +225,10 @@
         <div class='highlight'><pre><span class="k">if</span> <span class="n">idea</span><span class="o">.</span><span class="n">title?</span></pre></div>
       </td>
     </tr>
-    <tr id='section-13'>
+    <tr id='section-14'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-13">#</a>
+          <a class="octothorpe" href="#section-14">#</a>
         </div>
         <p> ipv</p>
       </td>
@@ -223,10 +236,10 @@
         <div class='highlight'><pre><span class="k">if</span> <span class="o">!</span><span class="n">idea</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">blank?</span></pre></div>
       </td>
     </tr>
-    <tr id='section-14'>
+    <tr id='section-15'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-14">#</a>
+          <a class="octothorpe" href="#section-15">#</a>
         </div>
         <p> Gebruik van de return value van = is prima</p>
       </td>
@@ -238,10 +251,10 @@
 <span class="k">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-15'>
+    <tr id='section-16'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-15">#</a>
+          <a class="octothorpe" href="#section-16">#</a>
         </div>
         <p> gebruik geen return als het niet nodig is (alleen nodig als je bijvoorbeeld
  voortijdig uit een method wilt)</p>
@@ -250,10 +263,10 @@
         <div class='highlight'><pre></pre></div>
       </td>
     </tr>
-    <tr id='section-16'>
+    <tr id='section-17'>
       <td class=docs>
         <div class="octowrap">
-          <a class="octothorpe" href="#section-16">#</a>
+          <a class="octothorpe" href="#section-17">#</a>
         </div>
         <p> Gebruik ? om sql injection tegen te gaan</p>
 

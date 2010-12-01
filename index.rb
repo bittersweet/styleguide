@@ -1,15 +1,20 @@
 #Gebruik haakjes bij functie definities en calls, behalve als ze leeg zijn
 def rewrite(arg1, arg2)
 Object.rewrite("holder", "Holder")
+redirect_to post_path(:query => 'test')
+
+# Dit hoeft niet bij alles
+redirect_to post_path
+render :action => :post
 
 # Zet spaties achter operators, commas, dubbele punten, puntcommas en haakjes
 1 + 3
 array = [1, 2]
-hash = { :a, :b }
 proc { |args| upcase }
 def method(x, a = 3, b = nil)
 
-# Maar niet in evaluated ruby
+# Maar niet hier
+hash = {:a, :b}
 "#{object.to_i}"
 
 # Geen spaties achter ([ en voor ])
